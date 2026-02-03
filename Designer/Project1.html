@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Development</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Georgia, sans-serif;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+    }
+
+    .navbar {
+      background-color: #4C6444;
+    }
+
+    .navbar .nav-link {
+      color: #CABA9C;
+    }
+
+    .navbar .nav-link:hover {
+      color: #896240;
+    }
+
+    .project-section {
+      margin-top: 70px;
+      padding: 20px 40px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .project-title {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #5a3421;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* New gallery styling */
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .gallery-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .gallery-item img {
+      width: 45%;
+      max-width: 450px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .description {
+      width: 50%;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #3a3a3a;
+    }
+
+    .description p.main-desc {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin: 0.2em 0 0.5em 0;
+    }
+
+    .description p {
+      font-weight: 400;
+      margin: 0.4em 0;
+    }
+
+    .description p .label {
+      font-weight: 600;
+    }
+
+    /* Responsive: stack vertically on smaller screens */
+
+    @media (max-width: 900px) {
+      .gallery-item {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .gallery-item img,
+      .description {
+        width: 100%;
+        max-width: none;
+      }
+
+      .description {
+        margin-top: 15px;
+        text-align: center;
+      }
+    }
+
+    .back-link {
+      display: inline-block;
+      text-align: left;
+      margin: 40px 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
+
+    .back-link:hover {
+      color: #6b4f29;
+      border-bottom: 2px solid #6b4f29;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/logo.jpg" class="logo" alt="logo">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../About.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="project-section container">
+    <h1 class="project-title">Adobe Illustrator</h1>
+
+    <div class="gallery">
+
+      <div class="gallery-item">
+        <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/greencitizen.png" alt="Green Citizen">
+        <div class="description">
+          <h3>Green Citizen Project</h3>
+          <p class="main-desc">This artwork illustrates sustainable living and eco-friendly practices under the SG Green Plan 2024 for 'Green Citizenry'</p>
+          <p><span class="label">Duration:</span> approx. 2 hours</p>
+          <p><span class="label">Tools:</span> Adobe Illustrator, images for references, pen and paper for sketches</p>
+          <p><span class="label">Challenges faced:</span> controls of curves and edges, multiple frames which lead to disorganization </p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/hawker.png" alt="Hawker Illustration">
+        <div class="description">
+          <h3>The Heart of Singapore's Culture</h3>
+          <p class="main-desc">A practice on poster-making following the principle of designs, encouraging viewers to enrol in a
+            Hawker Centres Trial with rewards given</p>
+          <p><span class="label">Duration:</span> 45 minutes</p>
+          <p><span class="label">Tools:</span> Adobe Illustrator, pen and paper for sketches</p>
+          <p><span class="label">Challenges faced:</span> placement of texts to not make it cramped and messy, creating a simple yet complex design on hawker culture</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/typography.png" alt="Typography Design">
+        <div class="description">
+          <h3>Typography practice</h3>
+          <p class="main-desc">Practice of typography using words related to shape image</p>
+          <p><span class="label">Duration:</span> 1 hour</p>
+          <p><span class="label">Tools:</span> Adobe Illustrator, pen and paper for sketches</p>
+          <p><span class="label">Challenges faced:</span> morphing words to wrap accordingly to image</p>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="Designer.html" class="back-link">
+      ➤ Back to Design
+    </a>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Georgia, sans-serif;
+    }
+
+    .logo {
+      width: 70px;
+    }
+
+    .navbar {
+      background-color: #4C6444;
+    }
+
+    .navbar .nav-link {
+      color: #CABA9C;
+    }
+
+    .navbar .nav-link:hover {
+      color: #896240;
+    }
+
+    /* ===== About Section ===== */
+
+    .about-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px;
+      gap: 80px;
+    }
+
+    .about-text {
+      width: 55%;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: bold;
+    }
+
+    .about-text h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    .about-image-container {
+      width: 35%;
+      border: 12px solid #5a341e;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .about-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===== SkillSets ===== */
+
+    .skillsets-section {
+      max-width: 1100px;
+      margin: 100px auto;
+      padding: 60px;
+      background: #ffffff;
+      border-radius: 25px;
+      border: 4px solid #5a341e;
+    }
+
+    .skillsets-section h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #1f3b2d;
+    }
+
+    .skillsets-content {
+      display: flex;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    .skill-box {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .skill-box h3 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #4C6444;
+    }
+
+    .skill-box ul {
+      font-size: 20px;
+      line-height: 1.7;
+      padding-left: 20px;
+    }
+
+    /* ===== Carousel ===== */
+
+    .carousel-wrapper {
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    .image-carousel {
+      display: flex;
+      gap: 40px;
+      padding: 40px 80px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      user-select: none;
+    }
+
+    .image-carousel::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .image-carousel::-webkit-scrollbar-thumb {
+      background: #5a341e;
+      border-radius: 10px;
+    }
+
+    .image-carousel img {
+      width: 420px;
+      height: 300px;
+      object-fit: contain;
+      background: #fff;
+      border: 12px solid #5a341e;
+      border-radius: 20px;
+      flex-shrink: 0;
+      -webkit-user-drag: none;
+    }
+
+    /* ===== Certifications Header ===== */
+
+    .certifications-header {
+      max-width: 1100px;
+      margin: 40px auto 10px;
+      /* smaller top & bottom spacing */
+      padding: 0 80px;
+      /* align with carousel padding */
+    }
+
+
+    .certifications-header h2 {
+      font-size: 42px;
+      font-weight: bold;
+      color: #1f3b2d;
+      margin-bottom: 0;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background-color: #4C6444;
+      color: #CABA9C;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .resume-btn:hover {
+      background-color: #896240;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/logo.jpg" class="logo">
+      <ul class="nav justify-content-end">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About -->
+  <section class="about-section">
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        My name is Nashariyah, preferably addressed as Nash. I am currently studying in Digital Design and Development
+        in Republic Polytechnic, pursuing the dream of being in the IT industry field as a Web Designer, Graphic
+        Designer
+        or Game Developer.
+      </p>
+      <p>
+        Having an interest in Arts since young, I am able to view things differently and provide relative feedback
+        for improvement. I am team-spirited and contribute positively to group environments.
+      </p>
+      <a href="../img/Nashariyah.pdf" download class="resume-btn">
+        Click here for my resume
+      </a>
+    </div>
+
+
+    <div class="about-image-container">
+      <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/photo_2025-11-27_12-02-04.jpg">
+    </div>
+  </section>
+
+  <!-- SkillSets -->
+  <section class="skillsets-section">
+    <h2>SkillSets</h2>
+
+    <div class="skillsets-content">
+      <div class="skill-box">
+        <h3>Strengths</h3>
+        <ul>
+          <li>Basic web development (HTML, CSS)</li>
+          <li>Working well in teams and sharing ideas</li>
+          <li>Attentive to details</li>
+          <li>Willing to learn and adapt</li>
+        </ul>
+      </div>
+
+      <div class="skill-box">
+        <h3>Weaknesses</h3>
+        <ul>
+          <li>Perfectionism may slow workflow</li>
+          <li>Limited IT-related exposure</li>
+          <li>Time management under heavy workload</li>
+          <li>Less responsive under pressure</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel -->
+  <!-- Certifications Header -->
+  <div class="certifications-header">
+    <h2>Certifications</h2>
+  </div>
+  <section class="carousel-wrapper">
+    <div class="image-carousel">
+      <img src="img/basicfigmacert.png" draggable="false">
+      <img src="img/UXpersona.png" draggable="false">
+      <img src="img/softwaretestplanning.png" draggable="false">
+      <img src="img/reactnative.png" draggable="false">
+      <img src="img/javawebform.png" draggable="false">
+      <img src="img/nodeessential.png" draggable="false">
+    </div>
+  </section>
+
+  <script>
+    const carousel = document.querySelector('.image-carousel');
+    carousel.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      carousel.scrollLeft += e.deltaY;
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

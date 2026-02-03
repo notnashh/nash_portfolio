@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Verdana, sans-serif;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+    }
+
+    .navbar {
+      background-color: #4C6444;
+    }
+
+    .navbar .nav-link {
+      color: #CABA9C;
+    }
+
+    .navbar .nav-link:hover {
+      color: #896240;
+    }
+
+    /* Back button */
+    .back-button {
+      display: inline-block;
+      margin: 15px 40px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      background-color: #4C6444;
+      color: #CABA9C;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #5a704f;
+      color: #fff;
+    }
+
+    .project-section {
+      margin-top: 20px;
+      padding: 20px 40px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .project-title {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #5a3421;
+      margin-bottom: 30px;
+    }
+
+    .project-subtitle {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #5a3421;
+    }
+
+    .project-wrapper {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 60px;
+    }
+
+    .project-image {
+      flex: 1 1 50%;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .gallery img {
+      flex: 1 1 45%;
+      max-width: 45%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery img[src*="mmanimate.gif"] {
+      max-width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .project-text {
+      flex: 1 1 50%;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: #111;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 25px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
+
+    .project-description {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .project-details {
+      font-size: 1.15rem;
+      margin-bottom: 30px;
+    }
+
+    .project-link:hover {
+      color: #6b4f29;
+      border-bottom: 2px solid #6b4f29;
+    }
+
+    @media (max-width: 900px) {
+      .project-wrapper {
+        flex-direction: column;
+      }
+
+      .gallery img {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/logo.jpg" class="logo" alt="logo">
+      <ul class="nav justify-content-end">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../Portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="../Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BACK BUTTON -->
+  <a href="../Portfolio.html" class="back-button">← Back to Portfolio</a>
+
+  <!-- CONTENT -->
+  <section class="project-section container">
+
+    <h2 class="project-subtitle">Traditional Paintings</h2>
+
+    <div class="project-wrapper">
+      <div class="project-image">
+        <div class="gallery">
+          <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/photo_2025-12-10_16-56-33.jpg">
+          <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/photo_2025-12-10_16-56-40.jpg">
+        </div>
+      </div>
+
+      <div class="project-text">
+        <p class="project-description">
+          Handcrafted traditional paintings created during my personal free time.
+        </p>
+
+        <div class="project-details">
+          <p><span class="label">Duration:</span> less than an hour</p>
+          <p><span class="label">Tools:</span> Watercolour, watercolour paper, brushes</p>
+          <p><span class="label">Challenges faced:</span> identifying different colour tones, shading</p>
+        </div>
+      </div>
+    </div>
+
+
+    <h2 class="project-subtitle">Mixed-media animation</h2>
+    <div class="project-wrapper">
+      <div class="project-image">
+        <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/mmanimate.gif"
+          class="w-100 rounded shadow" style="height:250px; object-fit:cover;">
+      </div>
+
+      <div class="project-text">
+        <p class="project-description">
+          The Marias - mixedmedia animation
+        </p>
+
+        <div class="project-details">
+          <p><span class="label">Duration:</span> 1 week</p>
+          <p><span class="label">Tools:</span>printed images, drawing tools, editting software</p>
+          <p><span class="label">Challenges faced:</span>converting video into frames and realigning them after
+            designing</p>
+        </div>
+      </div>
+    </div>
+
+
+    <h2 class="project-subtitle">HandCrafts</h2>
+    <div class="project-wrapper">
+      <div class="project-image">
+        <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/photo_2025-12-10_16-56-46.jpg"
+          class="w-100 rounded shadow">
+      </div>
+      <div class="project-text">
+        <p>
+          handcrafted creations created by me
+        </p>
+        <a href="Project2.html" class="project-link">➤ Click here for more information</a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
