@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Development</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Georgia, sans-serif;
+        }
+
+        .logo {
+            width: 70px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #4C6444;
+        }
+
+        .navbar .nav-link {
+            color: #CABA9C;
+        }
+
+        .navbar .nav-link:hover {
+            color: #896240;
+        }
+
+        /* ---- PAGE CONTENT ---- */
+        .project-section {
+            margin-top: 70px;
+            padding: 20px 40px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #5a3421;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .project-description {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .project-details {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+        }
+
+        .project-details span.label {
+            font-weight: 600;
+        }
+
+        /* ---- FLEXBOX GALLERY ---- */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            flex: 1 1 45%;
+            max-width: 45%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ---- LIGHTBOX MODAL ---- */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ---- BACK LINK ---- */
+        .back-link {
+            display: inline-block;
+            text-align: left;
+            margin: 40px 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: #6b4f29;
+            border-bottom: 2px solid #6b4f29;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 900px) {
+            .gallery img {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <img src="https://github.com/notnashh/NashPortfolio/releases/download/img/logo.jpg" class="logo" alt="logo">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- DEVELOPMENT CONTENT -->
+    <section class="project-section container">
+        <h1 class="project-title">Learn@RP - make learning swift</h1>
+
+        <!-- DESCRIPTION + DETAILS -->
+        <p class="project-description">
+            This app is created to cater towards Republic Poly students finding ways to seek
+            knowledge remotely via their mobile phones. 
+        </p>
+        <div class="project-details">
+            <p><span class="label">Duration:</span> 1 week</p>
+            <p><span class="label">Tools:</span> figma wireframes , image references</p>
+            <p><span class="label">Notable Features:</span> loading spinners, overlays, toggle buttons</p>
+            <p><span class="label">Challenges faced:</span> component functions, design layout, time-management </p>
+        </div>
+
+        <!-- FLEXBOX IMAGE GALLERY -->
+        <div class="gallery">
+            <img src="../img/uiux learnrp.png">
+            <video width="640" height="360" controls>
+                <source src="../img/uiux learn@rp app.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- BACK LINK AT THE VERY BOTTOM -->
+        <a href="Designer.html" class="back-link">
+            ➤ Back to Design
+        </a>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <script>
+        // LIGHTBOX SCRIPT
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const images = document.querySelectorAll('.gallery img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
